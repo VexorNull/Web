@@ -1,392 +1,430 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Tanveer Hussain (@vexornull) — Software & Systems Generalist</title>
-  <meta name="description" content="Tanveer Hussain (@vexornull) — Software & systems generalist building minimalist web apps, real-time Firebase tooling, and low-level Android/shell architectures. Portfolio & docs.">
-  <meta name="keywords" content="Tanveer Hussain, vexornull, @vexornull, software engineer Karachi, frontend developer Pakistan, GitHub Pages portfolio, Firebase web apps, Swiss grid design">
-  <meta name="author" content="Tanveer Hussain (@vexornull)">
+  <title>Aurelius Vance — Private Office & Archives</title>
+  <meta name="description" content="Principal office, archival inquiries, and sovereign ventures of Aurelius Vance.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <link rel="canonical" href="https://aureliusvance.com/">
+
+  <!-- Controlled Stealth Indexing / Restricted Dossier Path Directive via Meta -->
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#09090b">
-  
-  <!-- Canonical & Alternate Links -->
-  <link rel="canonical" href="https://vexornull.github.io/">
-  
-  <!-- OpenGraph / Social Rich Previews -->
+
+  <!-- OpenGraph / Obsidian Minimal Monogram Preview -->
   <meta property="og:type" content="profile">
-  <meta property="og:site_name" content="Tanveer Hussain (@vexornull)">
-  <meta property="og:url" content="https://vexornull.github.io/">
-  <meta property="og:title" content="Tanveer Hussain (@vexornull) — Software & Systems Generalist">
-  <meta property="og:description" content="Software & systems generalist exploring the intersection of clean code, security, and low-level logic.">
-  <meta property="og:image" content="https://vexornull.github.io/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Tanveer Hussain (@vexornull) portfolio cover">
-  <meta property="profile:username" content="vexornull">
+  <meta property="og:title" content="Aurelius Vance — Private Office">
+  <meta property="og:description" content="Sovereign asset oversight, spatial architecture, and long-horizon inquiry.">
+  <meta property="og:url" content="https://aureliusvance.com/">
+  <meta property="og:image" content="https://aureliusvance.com/og-monogram.webp">
+  <meta property="profile:username" content="aureliusvance">
 
-  <!-- Twitter / X Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@vexornull">
-  <meta name="twitter:creator" content="@vexornull">
-  <meta name="twitter:title" content="Tanveer Hussain (@vexornull) — Portfolio">
-  <meta name="twitter:description" content="Software & systems generalist exploring clean code, security, and low-level logic.">
-  <meta name="twitter:image" content="https://vexornull.github.io/og-image.png">
-
-  <!-- Preload Fonts & Tailwind CSS CDN -->
+  <!-- Typography Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            obsidian: '#09090b',
-            surface: '#121215',
-            cream: '#f4f4f5',
-            muted: '#a1a1aa',
-            line: '#27272a'
-          },
-          fontFamily: {
-            sans: ['Inter', -apple-system, BlinkMacSystemFont, 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          }
-        }
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/tokens.css">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      background-image: var(--shadow-atmospheric);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: rgba(197, 160, 89, 0.25);
+      color: var(--text-primary);
+    }
+
+    /* Layout Structure */
+    .vault-grid {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    /* 1. Atmospheric Anchor */
+    .anchor-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border-hairline);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .hero-section {
+      min-height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 0 5rem 0;
+      border-bottom: 1px solid var(--border-structural);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: clamp(3.25rem, 8vw, 7.5rem);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title i {
+      font-style: italic;
+      color: var(--text-secondary);
+    }
+
+    /* 2. Statement / Manifesto */
+    .manifesto-section {
+      padding: 7rem 0;
+      border-bottom: 1px solid var(--border-structural);
+    }
+
+    .manifesto-prose {
+      max-width: var(--content-narrow);
+      font-family: var(--font-display);
+      font-size: clamp(1.65rem, 3.2vw, 2.5rem);
+      line-height: 1.35;
+      color: var(--text-primary);
+      font-weight: 400;
+    }
+
+    .manifesto-prose span {
+      color: var(--text-secondary);
+    }
+
+    /* 3. Domain of Inquiry / Holdings */
+    .holdings-section {
+      padding: 7rem 0;
+      border-bottom: 1px solid var(--border-structural);
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-accent);
+      margin-bottom: 3.5rem;
+    }
+
+    .holding-row {
+      display: grid;
+      grid-template-columns.clamp: 200px 1fr 180px;
+      grid-template-columns: 220px 1fr 140px;
+      gap: 2rem;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--border-structural);
+      align-items: baseline;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+
+    .holding-row:hover {
+      opacity: 0.75;
+    }
+
+    .holding-index {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    .holding-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+      color: var(--text-primary);
+    }
+
+    .holding-meta {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-align: right;
+    }
+
+    /* Expandable Dossier drawer */
+    .dossier-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
+      background: var(--bg-secondary);
+      border-left: 1px solid var(--border-hairline);
+    }
+
+    .holding-row.active + .dossier-panel {
+      max-height: 320px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .dossier-content {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* 4. Editorial Dispatches */
+    .editorial-section {
+      padding: 7rem 0;
+      border-bottom: 1px solid var(--border-structural);
+    }
+
+    .dispatch-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 1.75rem 0;
+      border-bottom: 1px solid var(--border-structural);
+    }
+
+    .dispatch-title {
+      font-size: 1.15rem;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .dispatch-date {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+
+    /* 5. Direct Private Channel */
+    .channel-section {
+      padding: 7rem 0;
+      border-bottom: 1px solid var(--border-structural);
+      display: grid;
+      grid-template-columns.clamp: 1fr;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .pgp-box {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      background: var(--bg-secondary);
+      padding: 1.5rem;
+      border: 1px solid var(--border-hairline);
+      word-break: break-all;
+    }
+
+    .liaison-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      text-decoration: none;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+
+    .copy-toast {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-accent);
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+    }
+
+    /* 6. Colophon */
+    .colophon {
+      padding: 3rem 0;
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .holding-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      .holding-meta {
+        text-align: left;
+      }
+      .channel-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
     }
-  </script>
+  </style>
 
-  <!-- Complete Structured Data (JSON-LD Schema Graph) -->
+  <!-- Strict Structured Data Entity Triangulation -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Person",
-        "@id": "https://vexornull.github.io/#person",
-        "name": "Tanveer Hussain",
-        "alternateName": "vexornull",
-        "url": "https://vexornull.github.io",
-        "jobTitle": "Software & Systems Generalist",
+        "@id": "https://aureliusvance.com/#person",
+        "name": "Aurelius Vance",
+        "url": "https://aureliusvance.com",
+        "jobTitle": "Principal Curator & Family Office Managing Director",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Karachi",
-          "addressCountry": "PK"
+          "addressLocality": "Zurich / Geneva",
+          "addressCountry": "CH"
         },
         "sameAs": [
-          "https://github.com/vexornull",
-          "https://twitter.com/vexornull",
-          "https://linkedin.com/in/vexornull"
+          "https://wikidata.org/wiki/Q0000000",
+          "https://www.linkedin.com/in/aureliusvance"
         ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://vexornull.github.io/#website",
-        "url": "https://vexornull.github.io",
-        "name": "Tanveer Hussain (@vexornull) Portfolio",
-        "publisher": {
-          "@id": "https://vexornull.github.io/#person"
-        }
       }
     ]
   }
   </script>
-
-  <style>
-    :root {
-      --bg: #09090b;
-      --fg: #f4f4f5;
-    }
-    html.light {
-      --bg: #ffffff;
-      --fg: #09090b;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      transition: background-color 0.2s ease, color 0.2s ease;
-    }
-    .font-mono {
-      font-family: 'JetBrains Mono', monospace;
-    }
-    ::selection {
-      background: #27272a;
-      color: #f4f4f5;
-    }
-    .project-card {
-      transition: border-color 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .project-card:hover {
-      border-color: #52525b;
-    }
-  </style>
 </head>
-<body class="antialiased selection:bg-zinc-800">
+<body>
 
-  <!-- Skip to Content (Accessibility requirement) -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian dark:focus:bg-obsidian dark:focus:text-cream focus:px-4 focus:py-2 focus:text-xs font-mono border border-line">
-    Skip to content
-  </a>
+  <div class="vault-grid">
+    <!-- 1. Atmospheric Anchor -->
+    <header class="anchor-bar" aria-label="Geographic and Temporal Anchor">
+      <span>LAT 47.3769° N // LON 8.5417° E</span>
+      <span>SOLAR/UTC TIME: <time id="utc-clock">00:00:00 UTC</time></span>
+      <span>INDEX VERIFIED</span>
+    </header>
 
-  <!-- Top Floating Utilities (Theme + Handle Copy) -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-[var(--bg)]/85 backdrop-blur-md border-b border-line">
-    <div class="max-w-2xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-mono">
-      <a href="#" class="text-muted hover:text-[var(--fg)] transition-colors">@vexornull</a>
-      <div class="flex items-center gap-4">
-        <button id="copy-handle-btn" aria-label="Copy handle to clipboard" class="text-muted hover:text-[var(--fg)] transition-colors cursor-pointer">
-          <span id="handle-status">copy handle</span>
-        </button>
-        <span class="text-line">|</span>
-        <button id="theme-toggle" aria-label="Toggle dark and light theme" class="text-muted hover:text-[var(--fg)] transition-colors cursor-pointer">
-          <span id="theme-label">light</span>
-        </button>
-      </div>
-    </div>
-  </header>
+    <section class="hero-section">
+      <h1 class="hero-title">Aurelius Vance<br><i>Private Vault &amp; Direct Inquiry</i></h1>
+    </section>
 
-  <!-- Main Container (Single-column High-density Swiss Grid) -->
-  <main id="main-content" class="max-w-2xl mx-auto px-6 pt-32 pb-24 space-y-16">
-    
-    <!-- 1. Header / Hero -->
-    <section aria-labelledby="hero-title" class="space-y-6">
-      <div class="flex items-center justify-between gap-3 flex-wrap">
-        <span class="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-          Building / Open to selective collabs
-        </span>
-        <span class="text-[11px] font-mono text-muted">KHI // UTC+5</span>
-      </div>
-      
-      <div class="space-y-2">
-        <h1 id="hero-title" class="text-2xl sm:text-3xl font-medium tracking-tight">
-          Tanveer Hussain <span class="text-muted font-normal font-mono text-lg sm:text-xl">(@vexornull)</span>
-        </h1>
-        <p class="text-base text-muted leading-relaxed">
-          Software & systems generalist exploring the intersection of clean code, security, and low-level logic.
-        </p>
-      </div>
-
-      <div class="flex flex-wrap items-center gap-4 text-xs font-mono pt-1">
-        <a href="https://github.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">github/vexornull</a>
-        <span class="text-line">•</span>
-        <a href="https://twitter.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">x/vexornull</a>
-        <span class="text-line">•</span>
-        <a href="https://linkedin.com/in/vexornull" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">linkedin/vexornull</a>
+    <!-- 2. Statement / Ethos Manifesto -->
+    <section class="manifesto-section" aria-label="Manifesto">
+      <div class="manifesto-prose">
+        Capital without architecture is merely noise. We administer <span>sovereign duration</span>, structural preservation, and private industrial equity across multi-generational horizons.
       </div>
     </section>
 
-    <hr class="border-line">
+    <!-- 3. Domain of Inquiry / Holdings -->
+    <section class="holdings-section" aria-label="Selected Holdings and Ventures">
+      <div class="section-eyebrow">01 // Domain of Oversight &amp; Holdings</div>
 
-    <!-- 2. About / Manifesto -->
-    <section aria-labelledby="about-title" class="space-y-4">
-      <h2 id="about-title" class="text-xs font-mono uppercase tracking-widest text-muted">Manifesto</h2>
-      <article class="space-y-4 text-sm text-muted leading-relaxed">
-        <p class="text-[var(--fg)]">
-          I treat code as a medium for leverage and clarity. Bloat is technical debt paid upfront; minimalism enforces architecture discipline.
+      <div class="holding-row" onclick="toggleDossier(this)">
+        <span class="holding-index">REF.01 — ARCHITECTURAL</span>
+        <span class="holding-title">Alpine Subsurface Vaults AG</span>
+        <span class="holding-meta">2018 — PRESENT</span>
+      </div>
+      <div class="dossier-panel">
+        <p class="dossier-content">
+          Reinforced sovereign geological archival infrastructure providing climate-locked physical custody for immutable digital and biological artifacts.
         </p>
-        <p>
-          Whether building responsive web portals, custom GitHub tooling, or debugging low-level Android/shell behavior, I prioritize predictable state, raw speed, and zero abstraction leakage.
+      </div>
+
+      <div class="holding-row" onclick="toggleDossier(this)">
+        <span class="holding-index">REF.02 — INDUSTRIAL</span>
+        <span class="holding-title">Vance Materials &amp; Rare Isotopes</span>
+        <span class="holding-meta">2021 — PRESENT</span>
+      </div>
+      <div class="dossier-panel">
+        <p class="dossier-content">
+          Direct balance-sheet participation in high-purity semiconductor precursor refining and isotopic calibration laboratories.
         </p>
-        <p>
-          Less framework magic, tighter feedback loops, sharp execution.
+      </div>
+
+      <div class="holding-row" onclick="toggleDossier(this)">
+        <span class="holding-index">REF.03 — PHILANTHROPY</span>
+        <span class="holding-title">The Monolith Trust for Classical Metrics</span>
+        <span class="holding-meta">2015 — PERPETUAL</span>
+      </div>
+      <div class="dossier-panel">
+        <p class="dossier-content">
+          Endowment funding academic recovery, orthographic conservation, and permanent epigraphic documentation of endangered dialects.
         </p>
+      </div>
+    </section>
+
+    <!-- 4. Editorial / Dispatches -->
+    <section class="editorial-section" aria-label="Editorial Dispatches">
+      <div class="section-eyebrow">02 // Memoranda &amp; Dispatches</div>
+      <article class="dispatch-item">
+        <a href="#dispatch-1" class="dispatch-title">On the Permanence of Offline Materiality in Financial Instrument Design</a>
+        <time class="dispatch-date">2026.04.18</time>
+      </article>
+      <article class="dispatch-item">
+        <a href="#dispatch-2" class="dispatch-title">Notes on Structural Silence: Why Family Offices Fail via Excess Visibility</a>
+        <time class="dispatch-date">2025.11.02</time>
       </article>
     </section>
 
-    <hr class="border-line">
-
-    <!-- 3. Featured Projects / Work -->
-    <section aria-labelledby="work-title" class="space-y-6">
-      <div class="flex items-center justify-between">
-        <h2 id="work-title" class="text-xs font-mono uppercase tracking-widest text-muted">Selected Work</h2>
-        <span class="text-[11px] font-mono text-muted">3 deployments</span>
-      </div>
-      
-      <div class="space-y-3">
-        <!-- Project 1 -->
-        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
-          <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium tracking-tight">CyberPulse</h3>
-            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
-              <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse live preview" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
-            </div>
-          </div>
-          <p class="text-xs text-muted leading-relaxed">
-            Minimal telemetry visualization dashboard built with modular front-end architecture.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
-            <span>HTML5</span><span>•</span><span>Tailwind</span><span>•</span><span>JavaScript</span>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
-          <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium tracking-tight">VexorVPN Portal</h3>
-            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" aria-label="VexorVPN source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
-              <span class="text-line">/</span>
-              <span class="text-muted/40 cursor-not-allowed">offline</span>
-            </div>
-          </div>
-          <p class="text-xs text-muted leading-relaxed">
-            Lightweight static proxy configuration and node routing reference web interface.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
-            <span>HTML5</span><span>•</span><span>CSS Grid</span><span>•</span><span>Vanilla JS</span>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
-          <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium tracking-tight">Tanveer Connect</h3>
-            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
-              <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect live preview" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
-            </div>
-          </div>
-          <p class="text-xs text-muted leading-relaxed">
-            Frictionless direct community utility and minimalist credential exchange hub.
-          </p>
-          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
-            <span>Firebase</span><span>•</span><span>Tailwind</span><span>•</span><span>Auth SDK</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- 4. Stack / Arsenal -->
-    <section aria-labelledby="stack-title" class="space-y-4">
-      <h2 id="stack-title" class="text-xs font-mono uppercase tracking-widest text-muted">Arsenal</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs border border-line p-5 bg-surface/20">
-        <div class="space-y-2">
-          <span class="font-mono text-[var(--fg)] block font-medium">Languages</span>
-          <ul class="space-y-1.5 text-muted">
-            <li>JavaScript (ES6+)</li>
-            <li>HTML5 / CSS3</li>
-            <li>PHP (Core/CLI)</li>
-            <li>Bash / Shell</li>
-          </ul>
-        </div>
-        <div class="space-y-2">
-          <span class="font-mono text-[var(--fg)] block font-medium">Frontend / Web</span>
-          <ul class="space-y-1.5 text-muted">
-            <li>Tailwind CSS</li>
-            <li>Blogger XML</li>
-            <li>Firebase SDK</li>
-            <li>Swiss Grid UI</li>
-          </ul>
-        </div>
-        <div class="space-y-2">
-          <span class="font-mono text-[var(--fg)] block font-medium">Infra / Tools</span>
-          <ul class="space-y-1.5 text-muted">
-            <li>GitHub Pages / Actions</li>
-            <li>Termux / ADB / Shizuku</li>
-            <li>Git / Version Control</li>
-            <li>VS Code Core</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <hr class="border-line">
-
-    <!-- 5. Contact / Connect -->
-    <section aria-labelledby="contact-title" class="space-y-4">
-      <h2 id="contact-title" class="text-xs font-mono uppercase tracking-widest text-muted">Connect</h2>
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 border border-line">
-        <p class="text-xs text-muted">
-          Direct inquiries or selective project collabs.
+    <!-- 5. Direct Private Channel -->
+    <section class="channel-section" aria-label="Direct Private Channel">
+      <div>
+        <div class="section-eyebrow">03 // Encrypted Wire &amp; Liaison</div>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem; max-width: 420px;">
+          Direct communication requires verified cryptographic attestation or introductions via registered family office principals. Unfiltered pitches are automatically purged at edge ingestion.
         </p>
-        <div class="flex items-center gap-4 text-xs font-mono">
-          <button id="copy-email-btn" aria-label="Copy email address" class="text-[var(--fg)] hover:underline underline-offset-4 decoration-line cursor-pointer">
-            <span id="email-text">tanveer@vexornull.dev</span>
-          </button>
-          <span class="text-line">•</span>
-          <a href="mailto:tanveer@vexornull.dev" class="text-muted hover:text-[var(--fg)] transition-colors">mail ↗</a>
+        <div class="liaison-action" id="copy-email-trigger" role="button" tabindex="0">
+          <span>OFFICE@AURELIUSVANCE.COM</span>
+          <span class="copy-toast" id="copy-toast">COPY</span>
         </div>
+      </div>
+      <div class="pgp-box">
+        PGP FINGERPRINT: 8F4E 39A1 7C2B 91D0 4402<br>
+        KEY ID: 0x992B4A110E85CC9A<br>
+        STATUS: VALID / ROTATING QUARTERLY
       </div>
     </section>
 
-  </main>
-
-  <!-- 6. Footer -->
-  <footer class="max-w-2xl mx-auto px-6 py-8 border-t border-line text-xs font-mono text-muted flex flex-col sm:flex-row items-center justify-between gap-4">
-    <span>© <time datetime="2026">2026</time> Tanveer Hussain (@vexornull)</span>
-    <span>Zero bloat • Built for speed</span>
-  </footer>
-
-  <!-- Floating Toast Notification -->
-  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 pointer-events-none transition-all duration-200 z-50 bg-surface border border-line text-[var(--fg)] font-mono text-xs px-3.5 py-2 shadow-lg">
-    copied to clipboard
+    <!-- 6. Colophon / Vault Metadata -->
+    <footer class="colophon">
+      <span>COMMIT: v4.8.2-edge-immutable</span>
+      <span>ZERO TRACKERS // ZERO COOKIES // ZERO CDN Bloat</span>
+      <span>BUILD: <time datetime="2026-09-14">2026.09.14</time></span>
+    </footer>
   </div>
 
-  <!-- Minimal Vanilla JS Runtime -->
   <script>
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    const themeLabel = document.getElementById('theme-label');
-    const htmlEl = document.documentElement;
+    // Live UTC / Solar-aligned clock update
+    function updateClock() {
+      const now = new Date();
+      const utc = now.toISOString().slice(11, 19) + ' UTC';
+      document.getElementById('utc-clock').textContent = utc;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
 
-    themeToggleBtn.addEventListener('click', () => {
-      const isDark = htmlEl.classList.contains('dark');
-      if (isDark) {
-        htmlEl.classList.remove('dark');
-        htmlEl.classList.add('light');
-        themeLabel.textContent = 'dark';
-      } else {
-        htmlEl.classList.remove('light');
-        htmlEl.classList.add('dark');
-        themeLabel.textContent = 'light';
-      }
-    });
-
-    const toast = document.getElementById('toast');
-    let toastTimeout;
-
-    function showToast(message) {
-      toast.textContent = message;
-      toast.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-150', 'opacity-100');
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
-        toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 2000);
+    // Expandable inline dossier toggles
+    function toggleDossier(row) {
+      row.classList.toggle('active');
     }
 
-    const copyHandleBtn = document.getElementById('copy-handle-btn');
-    const handleStatus = document.getElementById('handle-status');
-    copyHandleBtn.addEventListener('click', async () => {
+    // Direct clipboard copy micro-interaction
+    const copyTrigger = document.getElementById('copy-email-trigger');
+    const toast = document.getElementById('copy-toast');
+    copyTrigger.addEventListener('click', async () => {
       try {
-        await navigator.clipboard.writeText('@vexornull');
-        const orig = handleStatus.textContent;
-        handleStatus.textContent = 'copied!';
-        showToast('copied @vexornull');
-        setTimeout(() => { handleStatus.textContent = orig; }, 2000);
+        await navigator.clipboard.writeText('office@aureliusvance.com');
+        toast.textContent = 'COPIED TO CLIPBOARD';
+        setTimeout(() => { toast.textContent = 'COPY'; }, 2000);
       } catch (e) {
-        handleStatus.textContent = 'error';
-      }
-    });
-
-    const copyEmailBtn = document.getElementById('copy-email-btn');
-    const emailText = document.getElementById('email-text');
-    copyEmailBtn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText('tanveer@vexornull.dev');
-        const orig = emailText.textContent;
-        emailText.textContent = 'copied!';
-        showToast('copied tanveer@vexornull.dev');
-        setTimeout(() => { emailText.textContent = orig; }, 2000);
-      } catch (e) {
-        emailText.textContent = 'copy failed';
+        toast.textContent = 'RESTRICTED';
       }
     });
   </script>
