@@ -1,0 +1,36 @@
+:root {
+  /* Surface & Substrate Hierarchy */
+  --bg-primary: #08080a;
+  --bg-secondary: #0f0f12;
+  --bg-elevated: #16161b;
+  --bg-glass: rgba(8, 8, 10, 0.78);
+
+  /* Typography & Ink */
+  --text-primary: #e5e2dc;
+  --text-secondary: #949088;
+  --text-muted: #5a5752;
+  --text-accent: #c5a059;
+
+  /* Hairline & Spatial Dividers */
+  --border-hairline: rgba(197, 160, 89, 0.18);
+  --border-structural: rgba(229, 226, 220, 0.08);
+
+  /* Font Families */
+  --font-display: 'Instrument Serif', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Fluid Spacing & Scale */
+  --space-unit: 1rem;
+  --container-max: 1140px;
+  --content-narrow: 680px;
+
+  /* Atmospheric Depth Gradient */
+  --shadow-atmospheric: radial-gradient(ellipse at 50% 0%, rgba(197, 160, 89, 0.04) 0%, rgba(8, 8, 10, 0) 70%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
