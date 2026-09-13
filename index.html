@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanveer Hussain (@vexornull) — Portfolio</title>
+  <meta name="description" content="Tanveer Hussain (@vexornull) — Software & systems generalist exploring clean code, security, and low-level logic. Minimalist developer portfolio.">
+  <link rel="canonical" href="https://vexornull.github.io/">
+  
+  <!-- OpenGraph / Social Rich Previews -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vexornull.github.io/">
+  <meta property="og:title" content="Tanveer Hussain (@vexornull) — Portfolio">
+  <meta property="og:description" content="Software & systems generalist exploring the intersection of clean code, security, and low-level logic.">
+  <meta property="og:image" content="https://vexornull.github.io/og-image.png">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@vexornull">
+  <meta name="twitter:title" content="Tanveer Hussain (@vexornull) — Portfolio">
+  <meta name="twitter:description" content="Software & systems generalist exploring clean code, security, and low-level logic.">
+
+  <!-- Preload Fonts & Tailwind CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#09090b',
+            surface: '#121215',
+            cream: '#f4f4f5',
+            muted: '#a1a1aa',
+            line: '#27272a'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Structured Data (JSON-LD Person Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tanveer Hussain",
+    "alternateName": "vexornull",
+    "url": "https://vexornull.github.io",
+    "jobTitle": "Software & Systems Generalist",
+    "sameAs": [
+      "https://github.com/vexornull",
+      "https://twitter.com/vexornull",
+      "https://linkedin.com/in/vexornull"
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #09090b;
+      color: #f4f4f5;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    /* Subtle custom selection */
+    ::selection {
+      background: #27272a;
+      color: #f4f4f5;
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-cream antialiased selection:bg-zinc-800">
+  
+  <!-- Skip to Content (Accessibility) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian focus:px-4 focus:py-2 focus:text-xs focus:font-mono">
+    Skip to content
+  </a>
+
+  <!-- Top Floating Utilities (Theme + Handle Copy) -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-obsidian/85 backdrop-blur-md border-b border-line">
+    <div class="max-w-2xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-mono">
+      <a href="#" class="text-muted hover:text-cream transition-colors">@vexornull</a>
+      <div class="flex items-center gap-4">
+        <button id="copy-handle-btn" aria-label="Copy handle to clipboard" class="text-muted hover:text-cream transition-colors cursor-pointer">
+          <span id="handle-status">copy handle</span>
+        </button>
+        <span class="text-line">|</span>
+        <button id="theme-toggle" aria-label="Toggle dark and light theme" class="text-muted hover:text-cream transition-colors cursor-pointer">
+          <span id="theme-label">light</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container (High-density Swiss Grid / Single-Column) -->
+  <main id="main-content" class="max-w-2xl mx-auto px-6 pt-32 pb-24 space-y-16">
+    
+    <!-- 1. Header / Hero -->
+    <section aria-labelledby="hero-title" class="space-y-6">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Building / Open to selective collabs
+        </span>
+      </div>
+      
+      <div class="space-y-2">
+        <h1 id="hero-title" class="text-2xl sm:text-3xl font-medium tracking-tight text-cream">
+          Tanveer Hussain <span class="text-muted font-normal font-mono text-lg sm:text-xl">(@vexornull)</span>
+        </h1>
+        <p class="text-base text-muted leading-relaxed">
+          Software & systems generalist exploring the intersection of clean code, security, and low-level logic.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 text-xs font-mono pt-1">
+        <a href="https://github.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">github/vexornull</a>
+        <span class="text-line">•</span>
+        <a href="https://twitter.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">x/vexornull</a>
+        <span class="text-line">•</span>
+        <a href="https://linkedin.com/in/vexornull" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">linkedin/vexornull</a>
+      </div>
+    </section>
+
+    <hr class="border-line">
+
+    <!-- 2. About / Manifesto -->
+    <section aria-labelledby="about-title" class="space-y-4">
+      <h2 id="about-title" class="text-xs font-mono uppercase tracking-widest text-muted">Manifesto</h2>
+      <article class="space-y-4 text-sm text-muted leading-relaxed">
+        <p class="text-cream">
+          I treat code as a medium for leverage and clarity. Bloat is technical debt paid upfront; minimalism enforces architecture discipline.
+        </p>
+        <p>
+          Whether building responsive web portals, custom GitHub tooling, or debugging low-level Android/shell behavior, I prioritize predictable state, raw speed, and zero abstraction leakage.
+        </p>
+        <p>
+          Less framework magic, tighter feedback loops, sharp execution.
+        </p>
+      </article>
+    </section>
+
+    <hr class="border-line">
+
+    <!-- 3. Featured Projects / Work -->
+    <section aria-labelledby="work-title" class="space-y-6">
+      <h2 id="work-title" class="text-xs font-mono uppercase tracking-widest text-muted">Selected Work</h2>
+      
+      <div class="divide-y divide-line border-y border-line">
+        <!-- Project 1 -->
+        <article class="py-4 space-y-1.5 group">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">CyberPulse</h3>
+            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
+              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <span class="text-line">/</span>
+              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse live preview" class="hover:text-cream transition-colors">live ↗</a>
+            </div>
+          </div>
+          <p class="text-xs text-muted leading-relaxed">
+            Minimal telemetry visualization dashboard built with modular front-end architecture.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
+            <span>HTML5</span><span>•</span><span>Tailwind</span><span>•</span><span>JavaScript</span>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="py-4 space-y-1.5 group">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">VexorVPN Portal</h3>
+            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
+              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" aria-label="VexorVPN source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <span class="text-line">/</span>
+              <span class="text-muted/50 cursor-not-allowed">live</span>
+            </div>
+          </div>
+          <p class="text-xs text-muted leading-relaxed">
+            Lightweight static proxy configuration and node routing reference web interface.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
+            <span>HTML5</span><span>•</span><span>CSS Grid</span><span>•</span><span>Vanilla JS</span>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="py-4 space-y-1.5 group">
+          <div class="flex items-baseline justify-between gap-4">
+            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">Tanveer Connect</h3>
+            <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
+              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <span class="text-line">/</span>
+              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect live preview" class="hover:text-cream transition-colors">live ↗</a>
+            </div>
+          </div>
+          <p class="text-xs text-muted leading-relaxed">
+            Frictionless direct community utility and minimalist credential exchange hub.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1 font-mono text-[11px] text-muted">
+            <span>Firebase</span><span>•</span><span>Tailwind</span><span>•</span><span>Auth SDK</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Stack / Arsenal -->
+    <section aria-labelledby="stack-title" class="space-y-4">
+      <h2 id="stack-title" class="text-xs font-mono uppercase tracking-widest text-muted">Arsenal</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+        <div class="space-y-2">
+          <span class="font-mono text-cream block">Languages</span>
+          <ul class="space-y-1 text-muted">
+            <li>JavaScript (ES6+)</li>
+            <li>HTML5 / CSS3</li>
+            <li>PHP (Core/CLI)</li>
+            <li>Bash / Shell</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <span class="font-mono text-cream block">Frontend / Web</span>
+          <ul class="space-y-1 text-muted">
+            <li>Tailwind CSS</li>
+            <li>Blogger XML</li>
+            <li>Firebase SDK</li>
+            <li>Swiss Grid UI</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <span class="font-mono text-cream block">Infra / Tools</span>
+          <ul class="space-y-1 text-muted">
+            <li>GitHub Pages / Actions</li>
+            <li>Termux / ADB / Shizuku</li>
+            <li>Git / Version Control</li>
+            <li>VS Code Core</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <hr class="border-line">
+
+    <!-- 5. Contact / Connect -->
+    <section aria-labelledby="contact-title" class="space-y-4">
+      <h2 id="contact-title" class="text-xs font-mono uppercase tracking-widest text-muted">Connect</h2>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <p class="text-xs text-muted">
+          Direct inquiries or selective project collabs.
+        </p>
+        <div class="flex items-center gap-4 text-xs font-mono">
+          <button id="copy-email-btn" aria-label="Copy email address" class="text-cream hover:underline underline-offset-4 decoration-line cursor-pointer">
+            <span id="email-text">tanveer@vexornull.dev</span>
+          </button>
+          <span class="text-line">•</span>
+          <a href="mailto:tanveer@vexornull.dev" class="text-muted hover:text-cream transition-colors">mail ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. Footer -->
+  <footer class="max-w-2xl mx-auto px-6 py-8 border-t border-line text-xs font-mono text-muted flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span>© <time datetime="2026">2026</time> Tanveer Hussain (@vexornull)</span>
+    <span>Zero bloat • Built for speed</span>
+  </footer>
+
+  <!-- Minimal Vanilla JS (Theme Toggle + Clipboard Copy) -->
+  <script>
+    // Theme toggle (Dark default)
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeLabel = document.getElementById('theme-label');
+    const htmlEl = document.documentElement;
+
+    themeToggleBtn.addEventListener('click', () => {
+      const isDark = htmlEl.classList.contains('dark');
+      if (isDark) {
+        htmlEl.classList.remove('dark');
+        htmlEl.classList.add('light');
+        themeLabel.textContent = 'dark';
+        document.body.style.backgroundColor = '#ffffff';
+        document.body.style.color = '#09090b';
+      } else {
+        htmlEl.classList.remove('light');
+        htmlEl.classList.add('dark');
+        themeLabel.textContent = 'light';
+        document.body.style.backgroundColor = '#09090b';
+        document.body.style.color = '#f4f4f5';
+      }
+    });
+
+    // Copy handle
+    const copyHandleBtn = document.getElementById('copy-handle-btn');
+    const handleStatus = document.getElementById('handle-status');
+    copyHandleBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('@vexornull');
+        handleStatus.textContent = 'copied!';
+        setTimeout(() => { handleStatus.textContent = 'copy handle'; }, 2000);
+      } catch (e) {
+        handleStatus.textContent = 'error';
+      }
+    });
+
+    // Copy email
+    const copyEmailBtn = document.getElementById('copy-email-btn');
+    const emailText = document.getElementById('email-text');
+    copyEmailBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('tanveer@vexornull.dev');
+        const orig = emailText.textContent;
+        emailText.textContent = 'copied to clipboard';
+        setTimeout(() => { emailText.textContent = orig; }, 2000);
+      } catch (e) {
+        emailText.textContent = 'copy failed';
+      }
+    });
+  </script>
+</body>
+</html>
