@@ -18,7 +18,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@vexornull">
   <meta name="twitter:title" content="Tanveer Hussain (@vexornull) — Portfolio">
-  <meta name="twitter:description" content="Software & systems generalist exploring clean code, security, and low-level logic.">
+  <meta name="twitter:description" content="Software & systems generalist exploring the intersection of clean code, security, and low-level logic.">
 
   <!-- Preload Fonts & Tailwind CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,58 +64,74 @@
   </script>
 
   <style>
+    :root {
+      --bg: #09090b;
+      --fg: #f4f4f5;
+    }
+    html.light {
+      --bg: #ffffff;
+      --fg: #09090b;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #09090b;
-      color: #f4f4f5;
+      background-color: var(--bg);
+      color: var(--fg);
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
     .font-mono {
       font-family: 'JetBrains Mono', monospace;
     }
-    /* Subtle custom selection */
     ::selection {
       background: #27272a;
       color: #f4f4f5;
     }
+    /* Subtle custom card hover lift */
+    .project-card {
+      transition: border-color 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .project-card:hover {
+      border-color: #52525b;
+    }
   </style>
 </head>
-<body class="bg-obsidian text-cream antialiased selection:bg-zinc-800">
+<body class="antialiased selection:bg-zinc-800">
   
-  <!-- Skip to Content (Accessibility) -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian focus:px-4 focus:py-2 focus:text-xs focus:font-mono">
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian dark:focus:bg-obsidian dark:focus:text-cream focus:px-4 focus:py-2 focus:text-xs focus:font-mono">
     Skip to content
   </a>
 
   <!-- Top Floating Utilities (Theme + Handle Copy) -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-obsidian/85 backdrop-blur-md border-b border-line">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-[var(--bg)]/85 backdrop-blur-md border-b border-line">
     <div class="max-w-2xl mx-auto px-6 h-12 flex items-center justify-between text-xs font-mono">
-      <a href="#" class="text-muted hover:text-cream transition-colors">@vexornull</a>
+      <a href="#" class="text-muted hover:text-[var(--fg)] transition-colors">@vexornull</a>
       <div class="flex items-center gap-4">
-        <button id="copy-handle-btn" aria-label="Copy handle to clipboard" class="text-muted hover:text-cream transition-colors cursor-pointer">
+        <button id="copy-handle-btn" aria-label="Copy handle to clipboard" class="text-muted hover:text-[var(--fg)] transition-colors cursor-pointer">
           <span id="handle-status">copy handle</span>
         </button>
         <span class="text-line">|</span>
-        <button id="theme-toggle" aria-label="Toggle dark and light theme" class="text-muted hover:text-cream transition-colors cursor-pointer">
+        <button id="theme-toggle" aria-label="Toggle dark and light theme" class="text-muted hover:text-[var(--fg)] transition-colors cursor-pointer">
           <span id="theme-label">light</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Container (High-density Swiss Grid / Single-Column) -->
+  <!-- Main Container -->
   <main id="main-content" class="max-w-2xl mx-auto px-6 pt-32 pb-24 space-y-16">
     
     <!-- 1. Header / Hero -->
     <section aria-labelledby="hero-title" class="space-y-6">
-      <div class="flex items-center gap-3">
+      <div class="flex items-center justify-between gap-3 flex-wrap">
         <span class="inline-flex items-center gap-2 text-xs font-mono text-emerald-400 bg-emerald-950/40 border border-emerald-900/60 px-2.5 py-1">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
           Building / Open to selective collabs
         </span>
+        <span class="text-[11px] font-mono text-muted">KHI // UTC+5</span>
       </div>
       
       <div class="space-y-2">
-        <h1 id="hero-title" class="text-2xl sm:text-3xl font-medium tracking-tight text-cream">
+        <h1 id="hero-title" class="text-2xl sm:text-3xl font-medium tracking-tight">
           Tanveer Hussain <span class="text-muted font-normal font-mono text-lg sm:text-xl">(@vexornull)</span>
         </h1>
         <p class="text-base text-muted leading-relaxed">
@@ -124,11 +140,11 @@
       </div>
 
       <div class="flex flex-wrap items-center gap-4 text-xs font-mono pt-1">
-        <a href="https://github.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">github/vexornull</a>
+        <a href="https://github.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">github/vexornull</a>
         <span class="text-line">•</span>
-        <a href="https://twitter.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">x/vexornull</a>
+        <a href="https://twitter.com/vexornull" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">x/vexornull</a>
         <span class="text-line">•</span>
-        <a href="https://linkedin.com/in/vexornull" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-muted hover:text-cream underline underline-offset-4 decoration-line transition-colors">linkedin/vexornull</a>
+        <a href="https://linkedin.com/in/vexornull" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-muted hover:text-[var(--fg)] underline underline-offset-4 decoration-line transition-colors">linkedin/vexornull</a>
       </div>
     </section>
 
@@ -138,7 +154,7 @@
     <section aria-labelledby="about-title" class="space-y-4">
       <h2 id="about-title" class="text-xs font-mono uppercase tracking-widest text-muted">Manifesto</h2>
       <article class="space-y-4 text-sm text-muted leading-relaxed">
-        <p class="text-cream">
+        <p class="text-[var(--fg)]">
           I treat code as a medium for leverage and clarity. Bloat is technical debt paid upfront; minimalism enforces architecture discipline.
         </p>
         <p>
@@ -152,19 +168,22 @@
 
     <hr class="border-line">
 
-    <!-- 3. Featured Projects / Work -->
+    <!-- 3. Featured Projects / Work (Refined interactive micro-card borders) -->
     <section aria-labelledby="work-title" class="space-y-6">
-      <h2 id="work-title" class="text-xs font-mono uppercase tracking-widest text-muted">Selected Work</h2>
+      <div class="flex items-center justify-between">
+        <h2 id="work-title" class="text-xs font-mono uppercase tracking-widest text-muted">Selected Work</h2>
+        <span class="text-[11px] font-mono text-muted">3 deployments</span>
+      </div>
       
-      <div class="divide-y divide-line border-y border-line">
+      <div class="space-y-3">
         <!-- Project 1 -->
-        <article class="py-4 space-y-1.5 group">
+        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
           <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">CyberPulse</h3>
+            <h3 class="text-sm font-medium tracking-tight">CyberPulse</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse live preview" class="hover:text-cream transition-colors">live ↗</a>
+              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
             </div>
           </div>
           <p class="text-xs text-muted leading-relaxed">
@@ -176,13 +195,13 @@
         </article>
 
         <!-- Project 2 -->
-        <article class="py-4 space-y-1.5 group">
+        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
           <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">VexorVPN Portal</h3>
+            <h3 class="text-sm font-medium tracking-tight">VexorVPN Portal</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" aria-label="VexorVPN source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
-              <span class="text-muted/50 cursor-not-allowed">live</span>
+              <span class="text-muted/40 cursor-not-allowed">offline</span>
             </div>
           </div>
           <p class="text-xs text-muted leading-relaxed">
@@ -194,13 +213,13 @@
         </article>
 
         <!-- Project 3 -->
-        <article class="py-4 space-y-1.5 group">
+        <article class="project-card p-4 border border-line bg-surface/40 space-y-2">
           <div class="flex items-baseline justify-between gap-4">
-            <h3 class="text-sm font-medium text-cream group-hover:underline underline-offset-4">Tanveer Connect</h3>
+            <h3 class="text-sm font-medium tracking-tight">Tanveer Connect</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect source code on GitHub" class="hover:text-cream transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect live preview" class="hover:text-cream transition-colors">live ↗</a>
+              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
             </div>
           </div>
           <p class="text-xs text-muted leading-relaxed">
@@ -216,10 +235,10 @@
     <!-- 4. Stack / Arsenal -->
     <section aria-labelledby="stack-title" class="space-y-4">
       <h2 id="stack-title" class="text-xs font-mono uppercase tracking-widest text-muted">Arsenal</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs border border-line p-5 bg-surface/20">
         <div class="space-y-2">
-          <span class="font-mono text-cream block">Languages</span>
-          <ul class="space-y-1 text-muted">
+          <span class="font-mono text-[var(--fg)] block font-medium">Languages</span>
+          <ul class="space-y-1.5 text-muted">
             <li>JavaScript (ES6+)</li>
             <li>HTML5 / CSS3</li>
             <li>PHP (Core/CLI)</li>
@@ -227,8 +246,8 @@
           </ul>
         </div>
         <div class="space-y-2">
-          <span class="font-mono text-cream block">Frontend / Web</span>
-          <ul class="space-y-1 text-muted">
+          <span class="font-mono text-[var(--fg)] block font-medium">Frontend / Web</span>
+          <ul class="space-y-1.5 text-muted">
             <li>Tailwind CSS</li>
             <li>Blogger XML</li>
             <li>Firebase SDK</li>
@@ -236,8 +255,8 @@
           </ul>
         </div>
         <div class="space-y-2">
-          <span class="font-mono text-cream block">Infra / Tools</span>
-          <ul class="space-y-1 text-muted">
+          <span class="font-mono text-[var(--fg)] block font-medium">Infra / Tools</span>
+          <ul class="space-y-1.5 text-muted">
             <li>GitHub Pages / Actions</li>
             <li>Termux / ADB / Shizuku</li>
             <li>Git / Version Control</li>
@@ -252,16 +271,16 @@
     <!-- 5. Contact / Connect -->
     <section aria-labelledby="contact-title" class="space-y-4">
       <h2 id="contact-title" class="text-xs font-mono uppercase tracking-widest text-muted">Connect</h2>
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 border border-line">
         <p class="text-xs text-muted">
           Direct inquiries or selective project collabs.
         </p>
         <div class="flex items-center gap-4 text-xs font-mono">
-          <button id="copy-email-btn" aria-label="Copy email address" class="text-cream hover:underline underline-offset-4 decoration-line cursor-pointer">
+          <button id="copy-email-btn" aria-label="Copy email address" class="text-[var(--fg)] hover:underline underline-offset-4 decoration-line cursor-pointer">
             <span id="email-text">tanveer@vexornull.dev</span>
           </button>
           <span class="text-line">•</span>
-          <a href="mailto:tanveer@vexornull.dev" class="text-muted hover:text-cream transition-colors">mail ↗</a>
+          <a href="mailto:tanveer@vexornull.dev" class="text-muted hover:text-[var(--fg)] transition-colors">mail ↗</a>
         </div>
       </div>
     </section>
@@ -274,7 +293,12 @@
     <span>Zero bloat • Built for speed</span>
   </footer>
 
-  <!-- Minimal Vanilla JS (Theme Toggle + Clipboard Copy) -->
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 pointer-events-none transition-all duration-200 z-50 bg-surface border border-line text-[var(--fg)] font-mono text-xs px-3.5 py-2 shadow-lg">
+    copied to clipboard
+  </div>
+
+  <!-- Minimal Vanilla JS -->
   <script>
     // Theme toggle (Dark default)
     const themeToggleBtn = document.getElementById('theme-toggle');
@@ -287,16 +311,26 @@
         htmlEl.classList.remove('dark');
         htmlEl.classList.add('light');
         themeLabel.textContent = 'dark';
-        document.body.style.backgroundColor = '#ffffff';
-        document.body.style.color = '#09090b';
       } else {
         htmlEl.classList.remove('light');
         htmlEl.classList.add('dark');
         themeLabel.textContent = 'light';
-        document.body.style.backgroundColor = '#09090b';
-        document.body.style.color = '#f4f4f5';
       }
     });
+
+    const toast = document.getElementById('toast');
+    let toastTimeout;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 2000);
+    }
 
     // Copy handle
     const copyHandleBtn = document.getElementById('copy-handle-btn');
@@ -304,8 +338,10 @@
     copyHandleBtn.addEventListener('click', async () => {
       try {
         await navigator.clipboard.writeText('@vexornull');
+        const orig = handleStatus.textContent;
         handleStatus.textContent = 'copied!';
-        setTimeout(() => { handleStatus.textContent = 'copy handle'; }, 2000);
+        showToast('copied @vexornull');
+        setTimeout(() => { handleStatus.textContent = orig; }, 2000);
       } catch (e) {
         handleStatus.textContent = 'error';
       }
@@ -318,7 +354,8 @@
       try {
         await navigator.clipboard.writeText('tanveer@vexornull.dev');
         const orig = emailText.textContent;
-        emailText.textContent = 'copied to clipboard';
+        emailText.textContent = 'copied!';
+        showToast('copied tanveer@vexornull.dev');
         setTimeout(() => { emailText.textContent = orig; }, 2000);
       } catch (e) {
         emailText.textContent = 'copy failed';
