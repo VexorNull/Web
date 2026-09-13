@@ -2,25 +2,38 @@
 <html lang="en" class="dark scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tanveer Hussain (@vexornull) — Portfolio</title>
-  <meta name="description" content="Tanveer Hussain (@vexornull) — Software & systems generalist exploring clean code, security, and low-level logic. Minimalist developer portfolio.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Tanveer Hussain (@vexornull) — Software & Systems Generalist</title>
+  <meta name="description" content="Tanveer Hussain (@vexornull) — Software & systems generalist building minimalist web apps, real-time Firebase tooling, and low-level Android/shell architectures. Portfolio & docs.">
+  <meta name="keywords" content="Tanveer Hussain, vexornull, @vexornull, software engineer Karachi, frontend developer Pakistan, GitHub Pages portfolio, Firebase web apps, Swiss grid design">
+  <meta name="author" content="Tanveer Hussain (@vexornull)">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#09090b">
+  
+  <!-- Canonical & Alternate Links -->
   <link rel="canonical" href="https://vexornull.github.io/">
   
   <!-- OpenGraph / Social Rich Previews -->
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Tanveer Hussain (@vexornull)">
   <meta property="og:url" content="https://vexornull.github.io/">
-  <meta property="og:title" content="Tanveer Hussain (@vexornull) — Portfolio">
+  <meta property="og:title" content="Tanveer Hussain (@vexornull) — Software & Systems Generalist">
   <meta property="og:description" content="Software & systems generalist exploring the intersection of clean code, security, and low-level logic.">
   <meta property="og:image" content="https://vexornull.github.io/og-image.png">
-  
-  <!-- Twitter Card -->
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tanveer Hussain (@vexornull) portfolio cover">
+  <meta property="profile:username" content="vexornull">
+
+  <!-- Twitter / X Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@vexornull">
+  <meta name="twitter:creator" content="@vexornull">
   <meta name="twitter:title" content="Tanveer Hussain (@vexornull) — Portfolio">
-  <meta name="twitter:description" content="Software & systems generalist exploring the intersection of clean code, security, and low-level logic.">
+  <meta name="twitter:description" content="Software & systems generalist exploring clean code, security, and low-level logic.">
+  <meta name="twitter:image" content="https://vexornull.github.io/og-image.png">
 
-  <!-- Preload Fonts & Tailwind CDN -->
+  <!-- Preload Fonts & Tailwind CSS CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,7 +51,7 @@
             line: '#27272a'
           },
           fontFamily: {
-            sans: ['Inter', 'sans-serif'],
+            sans: ['Inter', -apple-system, BlinkMacSystemFont, 'sans-serif'],
             mono: ['JetBrains Mono', 'monospace'],
           }
         }
@@ -46,19 +59,38 @@
     }
   </script>
 
-  <!-- Structured Data (JSON-LD Person Schema) -->
+  <!-- Complete Structured Data (JSON-LD Schema Graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tanveer Hussain",
-    "alternateName": "vexornull",
-    "url": "https://vexornull.github.io",
-    "jobTitle": "Software & Systems Generalist",
-    "sameAs": [
-      "https://github.com/vexornull",
-      "https://twitter.com/vexornull",
-      "https://linkedin.com/in/vexornull"
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://vexornull.github.io/#person",
+        "name": "Tanveer Hussain",
+        "alternateName": "vexornull",
+        "url": "https://vexornull.github.io",
+        "jobTitle": "Software & Systems Generalist",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Karachi",
+          "addressCountry": "PK"
+        },
+        "sameAs": [
+          "https://github.com/vexornull",
+          "https://twitter.com/vexornull",
+          "https://linkedin.com/in/vexornull"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://vexornull.github.io/#website",
+        "url": "https://vexornull.github.io",
+        "name": "Tanveer Hussain (@vexornull) Portfolio",
+        "publisher": {
+          "@id": "https://vexornull.github.io/#person"
+        }
+      }
     ]
   }
   </script>
@@ -85,7 +117,6 @@
       background: #27272a;
       color: #f4f4f5;
     }
-    /* Subtle custom card hover lift */
     .project-card {
       transition: border-color 0.2s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -95,9 +126,9 @@
   </style>
 </head>
 <body class="antialiased selection:bg-zinc-800">
-  
-  <!-- Skip to Content -->
-  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian dark:focus:bg-obsidian dark:focus:text-cream focus:px-4 focus:py-2 focus:text-xs focus:font-mono">
+
+  <!-- Skip to Content (Accessibility requirement) -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-cream focus:text-obsidian dark:focus:bg-obsidian dark:focus:text-cream focus:px-4 focus:py-2 focus:text-xs font-mono border border-line">
     Skip to content
   </a>
 
@@ -117,7 +148,7 @@
     </div>
   </header>
 
-  <!-- Main Container -->
+  <!-- Main Container (Single-column High-density Swiss Grid) -->
   <main id="main-content" class="max-w-2xl mx-auto px-6 pt-32 pb-24 space-y-16">
     
     <!-- 1. Header / Hero -->
@@ -168,7 +199,7 @@
 
     <hr class="border-line">
 
-    <!-- 3. Featured Projects / Work (Refined interactive micro-card borders) -->
+    <!-- 3. Featured Projects / Work -->
     <section aria-labelledby="work-title" class="space-y-6">
       <div class="flex items-center justify-between">
         <h2 id="work-title" class="text-xs font-mono uppercase tracking-widest text-muted">Selected Work</h2>
@@ -181,9 +212,9 @@
           <div class="flex items-baseline justify-between gap-4">
             <h3 class="text-sm font-medium tracking-tight">CyberPulse</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/CyberPulse" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
+              <a href="https://vexornull.github.io/CyberPulse/" target="_blank" rel="noopener noreferrer" aria-label="CyberPulse live preview" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
             </div>
           </div>
           <p class="text-xs text-muted leading-relaxed">
@@ -199,7 +230,7 @@
           <div class="flex items-baseline justify-between gap-4">
             <h3 class="text-sm font-medium tracking-tight">VexorVPN Portal</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/VexorVPN" target="_blank" rel="noopener noreferrer" aria-label="VexorVPN source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
               <span class="text-muted/40 cursor-not-allowed">offline</span>
             </div>
@@ -217,9 +248,9 @@
           <div class="flex items-baseline justify-between gap-4">
             <h3 class="text-sm font-medium tracking-tight">Tanveer Connect</h3>
             <div class="flex items-center gap-3 text-xs font-mono text-muted shrink-0">
-              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
+              <a href="https://github.com/vexornull/tanveer-connect" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect source on GitHub" class="hover:text-[var(--fg)] transition-colors">src ↗</a>
               <span class="text-line">/</span>
-              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
+              <a href="https://vexornull.github.io/tanveer-connect/" target="_blank" rel="noopener noreferrer" aria-label="Tanveer Connect live preview" class="hover:text-[var(--fg)] transition-colors">live ↗</a>
             </div>
           </div>
           <p class="text-xs text-muted leading-relaxed">
@@ -294,13 +325,12 @@
   </footer>
 
   <!-- Floating Toast Notification -->
-  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 pointer-events-none transition-all duration-200 z-50 bg-surface border border-line text-[var(--fg)] font-mono text-xs px-3.5 py-2 shadow-lg">
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 pointer-events-none transition-all duration-200 z-50 bg-surface border border-line text-[var(--fg)] font-mono text-xs px-3.5 py-2 shadow-lg">
     copied to clipboard
   </div>
 
-  <!-- Minimal Vanilla JS -->
+  <!-- Minimal Vanilla JS Runtime -->
   <script>
-    // Theme toggle (Dark default)
     const themeToggleBtn = document.getElementById('theme-toggle');
     const themeLabel = document.getElementById('theme-label');
     const htmlEl = document.documentElement;
@@ -324,7 +354,7 @@
     function showToast(message) {
       toast.textContent = message;
       toast.classList.remove('translate-y-10', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-0', 'opacity-150', 'opacity-100');
       clearTimeout(toastTimeout);
       toastTimeout = setTimeout(() => {
         toast.classList.add('translate-y-10', 'opacity-0', 'pointer-events-none');
@@ -332,7 +362,6 @@
       }, 2000);
     }
 
-    // Copy handle
     const copyHandleBtn = document.getElementById('copy-handle-btn');
     const handleStatus = document.getElementById('handle-status');
     copyHandleBtn.addEventListener('click', async () => {
@@ -347,7 +376,6 @@
       }
     });
 
-    // Copy email
     const copyEmailBtn = document.getElementById('copy-email-btn');
     const emailText = document.getElementById('email-text');
     copyEmailBtn.addEventListener('click', async () => {
