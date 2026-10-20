@@ -37,11 +37,11 @@ Designed & Developed by **Tanveer Hussain (@vexornull)**
 
 1. Clone or download this repository:
    ```bash
-   git clone https://github.com/vexornull/fancy-text-generator.git
+   git clone https://github.com/vexornull/Web.git
    ```
 2. Navigate into the project directory:
    ```bash
-   cd fancy-text-generator
+   cd Web
    ```
 3. Open `index.html` in any web browser. No `npm install` or compilation step required!
 
